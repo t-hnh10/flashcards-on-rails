@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Flashcard.destroy_all
+
+Flashcard.create(front: 'あの', back: 'umm', romanisation: 'ano')
+Flashcard.create(front: '今', back: 'now',romanisation: 'ima')
+Flashcard.create(front: 'ええ', back: 'yes', romanisation: 'ee')
+Flashcard.create(front: '学生', back: 'student', romanisation: 'gakusei')

@@ -1,2 +1,17 @@
 <h1>Flashcards on Rails</h1>
 <p>Browse the premade flashcards or create your own!</p>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Romanisation</th>
+    <th>Definition</th>
+  </tr>
+  <% @flashcards.each do |card| %>
+    <tr>
+      <td><%= card.front%></td>
+      <td><%= card.romanisation%></td>
+      <td><%= card.back%></td>
+    </tr>
+  <%end%>
+</div>
