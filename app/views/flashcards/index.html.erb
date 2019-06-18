@@ -4,13 +4,13 @@
 <table>
   <tr>
     <th>Term</th>
-    <th>Romanisation</th>
+    <th>Transliteration</th>
     <th>Definition</th>
   </tr>
   <% @flashcards.each do |card| %>
     <tr>
       <td><%= card.front%></td>
-      <td><%= card.romanisation%></td>
+      <td><%= card.transliteration%></td>
       <td><%= card.back%></td>
     </tr>
   <%end%>
