@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Flashcard.destroy_all
 
-Flashcard.create(front: 'あの', back: 'umm', romanisation: 'ano')
-Flashcard.create(front: '今', back: 'now',romanisation: 'ima')
-Flashcard.create(front: 'ええ', back: 'yes', romanisation: 'ee')
-Flashcard.create(front: '学生', back: 'student', romanisation: 'gakusei')
+Flashcard.create(front: 'あの', back: 'umm', transliteration: 'ano')
+Flashcard.create(front: '今', back: 'now',transliteration: 'ima')
+Flashcard.create(front: 'ええ', back: 'yes', transliteration: 'ee')
+Flashcard.create(front: '学生', back: 'student', transliteration: 'gakusei')
