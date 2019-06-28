@@ -4,12 +4,14 @@
     <th>Transliteration</th>
     <th>Definition</th>
   </tr>
-  <% @flashcards.each do |card| %>
-    <tr>
-      <td><%= card.front%></td>
-      <td><%= card.transliteration%></td>
-      <td><%= card.back%></td>
-    </tr>
+  <%if @flashcards%>
+    <% @flashcards.each do |card| %>
+      <tr>
+        <td><%=link_to card.front, flashcard_path(card) %></td>
+        <td><%= card.transliteration%></td>
+        <td><%= card.back%></td>
+      </tr>
+    <%end%>
   <%end%>
-  <p><a href='flashcards/new'>Add a new flashcard</a></p>
+  <p><%= link_to("Add a new flashcard", {:action => 'new'}) %></p>
 </div>
