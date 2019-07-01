@@ -16,6 +16,10 @@ class FlashcardsController < ApplicationController
     redirect_to flashcards_index_path
   end
 
+  def study
+    @flashcards = Flashcard.all
+  end
+
   def destroy
     @flashcard = Flashcard.find(params[:id])
     @flashcard.destroy

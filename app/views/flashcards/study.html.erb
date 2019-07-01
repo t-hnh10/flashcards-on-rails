@@ -1,0 +1,10 @@
+<h2>Study your flashcards!</h2>
+<table>
+    <% @flashcards.each do |card| %>
+        <tr>
+            <td><%= card.front %></td>
+            <td><%= card.transliteration %></td>
+            <td><%= card.back %></td>
+        </tr>
+    <%end%>
+</table>
