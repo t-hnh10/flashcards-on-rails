@@ -1,6 +1,6 @@
 <h2>Study your flashcards!</h2>
 <p class="word"><%= @flashcard_shuffled.front %></p>
-<button onclick="myFunction()">Show Answer</button>
-<p id="myDIV" style="display: none"><%= @flashcard_shuffled.back %></p>
-<p class="button"><%= link_to "Randomise", flashcards_study_path %></p>
+<button class="button" onclick="myFunction()">Show Answer</button>
+<p id="showAnswer" style="display: none"><%= @flashcard_shuffled.back %></p>
+<button class="button"><%= link_to "Randomise", flashcards_study_path %></button>
 <p><%= link_to "Back", flashcards_index_path %></p>
