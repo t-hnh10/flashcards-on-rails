@@ -1,7 +1,7 @@
 <%= form_with model: @flashcard, local:true do |form| %>
     <p>
         <%=label(:front, 'Term')%>
-        <%= form.text_field :front, required: true, minlength: 1%>
+        <%= form.text_field :front, required: false, minlength: 1%>
     </p>
     <p>
         <%=label(:transliteration, 'Transliteration')%>
@@ -9,8 +9,8 @@
     </p>
     <p>
         <%=label(:back, 'Definition')%>
-        <%= form.text_field :back, required: true, minlength: 1%>
+        <%= form.text_field :back, required: false, minlength: 1%>
     </p>
-    <%= form.submit "Add flashcard", class:"button"%>
+    <%= form.submit "Update flashcard", class:"button"%>
     <p><%= link_to "Back", flashcards_index_path %></p>
 <%end%>

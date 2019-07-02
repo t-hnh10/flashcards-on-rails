@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'flashcards', to: 'flashcards#new', as: 'new_flashcard' 
   post 'flashcards', to: 'flashcards#create'
   get 'flashcards/study', to: 'flashcards#study'
+  get 'flashcards/:id/edit', to: 'flashcards#edit', as: 'edit_flashcard'
+  patch 'flashcards/:id', to: 'flashcards#update'
   delete 'flashcards/:id', to: 'flashcards#destroy', as: 'delete_flashcard'
   get 'flashcards/:id', to: 'flashcards#show', as: 'flashcard'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,10 +1,4 @@
 <h2>Study your flashcards!</h2>
-<table>
-    <% @flashcards.each do |card| %>
-        <tr>
-            <td><%= card.front %></td>
-            <td><%= card.transliteration %></td>
-            <td><%= card.back %></td>
-        </tr>
-    <%end%>
-</table>
+<p class="word"><td><%= @flashcard_shuffled.front %></td></p>
+<p class="button"><%= link_to "Randomise", flashcards_study_path %></p>
+<p><%= link_to "Back", flashcards_index_path %></p>

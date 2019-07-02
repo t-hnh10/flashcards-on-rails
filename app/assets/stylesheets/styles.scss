@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+table {
+  border:1px solid black;
+  border-spacing: 20px 10px;
+}
+
 .container {
   display: grid;
   grid-template-columns: 100%;
@@ -26,6 +37,7 @@
   color: black;
   border: 2px solid #4CAF50;
   padding: 15px 32px;
+  margin: 0px 10px 20px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -36,4 +48,9 @@
 .button:hover {
   background-color: #4CAF50; /* Green */
   color: white;
+}
+
+.word {
+  font-size: 50px;
+  font-weight: bold;
 }
