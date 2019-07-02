@@ -4,6 +4,6 @@
 <p><%= "Transliteration: #{@flashcard.transliteration}" %></p>
 <p><%= "Definition: #{@flashcard.back}" %></p>
 
-<p><%= link_to 'Edit this flashcard', edit_flashcard_path(id: @flashcard.id) %></p>
-<p><%= link_to 'Delete this flashcard', @flashcard, method: "delete"%></p>
+<p class="button"><%= link_to 'Edit this flashcard', edit_flashcard_path(id: @flashcard.id) %></p></br>
+<p class="button"><%= link_to 'Delete this flashcard', @flashcard, method: "delete"%></p>
 <p><%= link_to "Back", flashcards_index_path %></p>
