@@ -1,0 +1,7 @@
+<h1>My Flashcards</h1>
+
+<% if @flashcards %>
+    <% @flashcards.each do |flashcard| %>
+        <p><%=link_to flashcard.title, flashcard_path(flashcard) %></p>
+    <% end %>
+<% end %>
