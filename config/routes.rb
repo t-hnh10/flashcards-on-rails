@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   patch 'flashcards/:id', to: 'flashcards#update'
   delete 'flashcards/:id', to: 'flashcards#destroy', as: 'delete_flashcard'
   get 'flashcards/:id', to: 'flashcards#show', as: 'flashcard'
-  get '/mylist', to: 'flashcard_list_items#index', as: 'flashcard_list_items'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

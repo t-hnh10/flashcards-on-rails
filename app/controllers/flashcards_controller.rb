@@ -1,6 +1,14 @@
 class FlashcardsController < ApplicationController
+  before_action :ensure_logged_in
+
+  def ensure_logged_in
+    if current_user == nil
+      return redirect_to new_user_registration_path
+    end
+  end
+  
   def index
-    @flashcards = Flashcard.all.order(:id)
+    @flashcards = current_user.flashcards.order(:id)
   end
 
   def show
@@ -23,7 +31,7 @@ class FlashcardsController < ApplicationController
   end
 
   def edit
-    @flashcard = Flashcard.find(params[:id])
+    @flashcard = current_user.flashcards.find(params[:id])
   end
 
   def update
