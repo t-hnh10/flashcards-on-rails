@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  root to: 'homepage#index'
   devise_for :users
   get 'flashcards/new'
   get 'flashcards/create'
   get 'flashcards/index'
-  root to: 'flashcards#index'
   get 'flashcards', to: 'flashcards#index', as: 'flashcards'
   get 'flashcards', to: 'flashcards#new', as: 'new_flashcard' 
   post 'flashcards', to: 'flashcards#create'
