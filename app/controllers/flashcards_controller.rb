@@ -20,7 +20,7 @@ class FlashcardsController < ApplicationController
   end
 
   def create
-    @flashcard = Flashcard.create_flashcard(params[:flashcard][:front], params[:flashcard][:transliteration], params[:flashcard][:back])
+    @flashcard = Flashcard.create_flashcard(params[:flashcard][:front], params[:flashcard][:transliteration], params[:flashcard][:back], current_user)
     redirect_to flashcards_index_path
   end
 
