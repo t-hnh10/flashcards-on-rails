@@ -2,38 +2,39 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #fbf7f5;
 }
 
 table {
   border:1px solid black;
   border-spacing: 20px 10px;
-}
-
-p.subheading {
-  margin-bottom: 0px;
+  margin-top: 40px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 0.5fr 1fr 75px;
+  grid-template-columns: 80px 1fr 80px;
+  grid-template-rows: 120px 1fr 75px;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    "header header header"
+    ". main ."
+    ". footer .";
   height: 100%;
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: relative;
   overflow: auto;
 }
 
 .header {
   grid-area: header;
+  grid-column-start: 2;
   padding: 0;
   position: relative;
-  height: 60px;
-  width: 100%;
   z-index: 2;
+}
+
+.main {
+  grid-area: main;
 }
 
 .button {
@@ -57,4 +58,16 @@ p.subheading {
 .word {
   font-size: 50px;
   font-weight: bold;
+}
+
+.card {
+  grid-area: main;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
 }

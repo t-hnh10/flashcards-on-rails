@@ -11,6 +11,6 @@
         <%=label(:back, 'Definition')%>
         <%= form.text_field :back, required: true, minlength: 1%>
     </p>
-    <%= form.submit "Add flashcard", class:"button"%>
-    <p><%= link_to "Back", flashcards_index_path %></p>
+    <%= form.submit "Add flashcard", class:"button"%><br />
+    <%= link_to("Back", flashcards_index_path, :class => 'button', :method => :get) %>
 <%end%>

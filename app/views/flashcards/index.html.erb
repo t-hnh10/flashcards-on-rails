@@ -13,6 +13,6 @@
       </tr>
     <%end%>
   <%end%>
-  <p class="button"><%= link_to("Add a new flashcard", {:action => 'new'}) %></p>
-  <p class="button"><%= link_to("Study", {:action => 'study', :id => 1}) %></p>
+  <%= button_to "Add a new flashcard", flashcards_new_path, :action => 'new', :class => 'button', :method => :get %>
+  <%= button_to "Study", flashcards_study_path, :action => 'study', :id => 1, :class => 'button', :method => :get %>
 </div>

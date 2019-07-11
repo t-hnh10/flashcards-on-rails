@@ -1,11 +1,5 @@
 class FlashcardsController < ApplicationController
-  before_action :ensure_logged_in
-
-  def ensure_logged_in
-    if current_user == nil
-      return redirect_to new_user_registration_path
-    end
-  end
+  before_action :authenticate_user!
   
   def index
     @flashcards = current_user.flashcards.order(:id)
