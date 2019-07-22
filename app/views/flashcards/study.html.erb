@@ -1,8 +1,10 @@
 <h2>Study your flashcards!</h2>
-<p class="word"><%= @flashcard_shuffled.front %></p>
-<button class="button" onclick="showTransliteration()">Transliteration</button>
-<p id="showTrans" style="display: none"><%= @flashcard_shuffled.transliteration %></p></br>
-<button class="button" onclick="showDefinition()">Show Answer</button>
-<p id="showDef" style="display: none"><%= @flashcard_shuffled.back %></p></br>
-<%= button_to "Randomise", flashcards_study_path, :class => 'button', :method => :get %>
+<% if @flashcard %>
+    <p class="word"><%= @flashcard_shuffled.front %></p>
+    <button class="button" onclick="showTransliteration()">Transliteration</button>
+    <p id="showTrans" style="display: none"><%= @flashcard_shuffled.transliteration %></p></br>
+    <button class="button" onclick="showDefinition()">Show Answer</button>
+    <p id="showDef" style="display: none"><%= @flashcard_shuffled.back %></p></br>
+    <%= button_to "Randomise", flashcards_study_path, :class => 'button', :method => :get %>
+<% end %>
 <%= button_to "Back", flashcards_index_path, :class => 'button', :method => :get %>

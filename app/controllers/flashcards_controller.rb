@@ -20,8 +20,6 @@ class FlashcardsController < ApplicationController
 
   def study
     @flashcard_shuffled = Flashcard.all.shuffle.first
-    # @flashcard = Flashcard.find(params[:id])
-    # @flashcard_next = Flashcard.where("id > ?", params[:id]).order(:id).first
   end
 
   def edit
